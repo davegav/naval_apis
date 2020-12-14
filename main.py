@@ -27,9 +27,9 @@ api.add_middleware(
 async def auth_usuario(usuario_in: UsuarioIn):
     usuario_in_db = get_usuario(usuario_in.nombre)
     if usuario_in_db == None:
-        return {"Autenticado": true, "Mensaje": "Cuenta creada... en desarrollo"}#TODO Crearle la cuenta
+        return {"Autenticado": True, "Mensaje": "Cuenta creada... en desarrollo"}#TODO Crearle la cuenta
     else:
-        return {"Autenticado": true, "Mensaje": "Bienvenido de vuelta"}
+        return {"Autenticado": True, "Mensaje": "Bienvenido de vuelta"}
 
 """
 @api.get("/user/balance/{username}")
